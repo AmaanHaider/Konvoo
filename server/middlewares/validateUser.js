@@ -8,7 +8,6 @@ const validateUser = async (req, res, next) => {
       return res.status(401).json({ message: "Unauthorized" });
     }
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-
     const user = await User.findById(decoded.userId).select("-password");
     req.user = user;
     next();

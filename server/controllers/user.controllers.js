@@ -2,7 +2,7 @@ const User = require("../models/user.model");
 const bcrypt = require("bcrypt");
 const { json } = require("express");
 const jwt = require("jsonwebtoken");
-const genTokenandSetCookies = require("../utils/helpers/genTokenandSetCookies");
+const ValidateCookies = require("../middlewares/ValidateCookies");
 
 const signup = async (req, res) => {
   try {
@@ -23,7 +23,7 @@ const signup = async (req, res) => {
     await newUser.save();
 
     if (newUser) {
-      genTokenandSetCookies(newUser._id, res);
+      ValidateCookies(newUser._id, res);
       res.status(201).json({
         _id: newUser._id,
         name: newUser.name,
@@ -49,7 +49,7 @@ const login = async (req, res) => {
     if (!user || !checkPassword) {
       return res.status(400).json({ message: "Invalid Username or Password" });
     }
-    genTokenandSetCookies(user._id, res);
+    ValidateCookies(user._id, res);
     res.status(200).json({
       _id: user._id,
       name: user.name,

@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-const genTokenandSetCookies = (userId, res) => {
+const ValidateCookies = (userId, res) => {
   const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
     expiresIn: "15d",
   });
@@ -12,4 +12,4 @@ const genTokenandSetCookies = (userId, res) => {
   });
   return token
 };
-module.exports = genTokenandSetCookies;
+module.exports = ValidateCookies;

@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "ThreadTalk",
+    "name": "Konvoo",
     "builds": [
        { "src": "index.js", "use": "@vercel/node" }
     ],
