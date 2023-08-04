@@ -14,7 +14,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 1. Clone the repository:
 
-git clone https://github.com/your-username/konvoo-app.git 
+git clone https://github.com/AmaanHaider/Konvoo.git
 cd konvoo-app
 npm install
 
