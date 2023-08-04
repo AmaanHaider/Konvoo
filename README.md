@@ -1,4 +1,4 @@
-# konvoo App API Documentation
+# KONVOO App API Documentation
 
 Welcome to konvoo, a social media-like application built with Node.js, Express, and MongoDB. konvoo allows users to create posts, like, reply, and follow other users, fostering a sense of community and connection.
 ## Getting Started
@@ -26,6 +26,13 @@ PORT=3000
 ### Usage
 
 npm start
+
+
+
+### API Documentation
+1-Access the application in your browser or API client at http://localhost:3000.
+2-Alternatively, you can also access the hosted version of the application at 
+https://konvoo.vercel.app/.
 
 
 ## User Routes
